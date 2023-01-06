@@ -8,8 +8,8 @@ router.post("/", async (req, res) => {
   console.log(req.body.newItem);
   const color = req.body.newItem.color;
   const clothe = req.body.newItem.clothe;
-  const warm = req.body.newItem.warm;
-  const newPost = new Posts({ color, clothe, warm });
+  const len = req.body.newItem.len;
+  const newPost = new Posts({ color, clothe, len });
   console.log(newPost);
   try {
     const post = await newPost.save();

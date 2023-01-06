@@ -12,7 +12,7 @@ const PostSchema = new Schema({
     required: true,
     default: "none given",
   },
-  warm: {
+  len: {
     type: Boolean,
     default: false,
   },

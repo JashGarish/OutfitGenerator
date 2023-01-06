@@ -5,7 +5,7 @@ export default function CreateItem() {
   const [formData, setFormData] = useState({
     colorInput: "",
     clotheInput: "",
-    temperatureInput: false,
+    lengthInput: false,
   });
 
   const handleChange = (event) => {
@@ -18,7 +18,7 @@ export default function CreateItem() {
     const newItem = {
       color: formData.colorInput,
       clothe: formData.clotheInput,
-      warm: formData.temperatureInput,
+      len: formData.lengthInput,
     };
     console.log(newItem);
     axios
@@ -53,20 +53,21 @@ export default function CreateItem() {
         >
           <option value="">Select an option</option>
           <option value="Shirt">Shirt</option>
-          <option value="Pant">Pant</option>
+          <option value="Pants">Pants</option>
+          <option value="Jacket">Jacket</option>
         </FormControl>
       </Form.Group>
 
       <Form.Group controlId="formDropdownInput">
-        <Form.Label>Temperature</Form.Label>
+        <Form.Label>Length</Form.Label>
         <FormControl
           as="select"
-          name="temperatureInput"
-          value={formData.temperatureInput}
+          name="lengthInput"
+          value={formData.lengthInput}
           onChange={handleChange}
         >
-          <option value={false}>Cold</option>
-          <option value={true}>Hot</option>
+          <option value={false}>Short</option>
+          <option value={true}>Long</option>
         </FormControl>
       </Form.Group>
 

@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/outfit-gen/node_modules
+
 /.pnp
 .pnp.js
 
